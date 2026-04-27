@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#004E52"/>
+
+  <!-- top-left aguamarina circle -->
+  <circle cx="140" cy="100" r="260" fill="#C5FFF7" opacity="0.22"/>
+
+  <!-- bottom-right ciruela ellipse -->
+  <ellipse cx="980" cy="520" rx="480" ry="220" fill="#680039" opacity="0.42"/>
+
+  <!-- small accent orb -->
+  <circle cx="980" cy="140" r="110" fill="#C5FFF7" opacity="0.14"/>
+
+  <!-- WOGO wordmark -->
+  <text
+    x="96" y="310"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+    font-weight="300"
+    font-size="200"
+    letter-spacing="-4"
+    fill="#FFFFFF"
+  >WOGO</text>
+
+  <!-- tagline -->
+  <text
+    x="98" y="382"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+    font-weight="400"
+    font-size="22"
+    letter-spacing="3"
+    fill="#C5FFF7"
+    opacity="0.88"
+  >SOFTWARE A LA MEDIDA · BOGOTÁ, COLOMBIA</text>
+
+  <!-- accent rule -->
+  <rect x="96" y="412" width="120" height="2" fill="#C5FFF7" opacity="0.6"/>
+
+  <!-- bottom label -->
+  <text
+    x="98" y="562"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+    font-weight="400"
+    font-size="15"
+    letter-spacing="2"
+    fill="#C5FFF7"
+    opacity="0.5"
+  >/ BOG — COL /   hola@wogo.com.co   2026</text>
+</svg>
