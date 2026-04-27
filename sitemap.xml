@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wogo.com.co/</loc>
+    <loc>https://www.wogo.com.co/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wogo.com.co/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wogo.com.co/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wogo.com.co/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.wogo.com.co/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wogo.com.co/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wogo.com.co/"/>
   </url>
 </urlset>
