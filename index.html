@@ -76,7 +76,7 @@
   </nav>
 </header>
 <main id="main">
-<section id="home" class="hero" aria-labelledby="hero-tag">
+<section id="home" class="hero" aria-labelledby="hero-tag" data-reveal>
   <div class="hero__decor" aria-hidden="true">
     <svg class="hero__decor-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
       <rect width="1000" height="600" fill="var(--wogo-pino)"/>
@@ -118,7 +118,7 @@
     </div>
   </div>
 </section>
-<section id="services" class="section section--theme-blanco services" aria-labelledby="services-tag">
+<section id="services" class="section section--theme-blanco services" aria-labelledby="services-tag" data-reveal>
   <div class="section__head">
     <span id="services-tag" class="section__eyebrow"><span lang="es">QUÉ HACEMOS</span><span lang="en">WHAT WE DO</span></span>
     <span class="section__index">02</span>
@@ -206,7 +206,7 @@ built to measure.</h2>
   </div>
 </li></ul>
 </section>
-<section id="who" class="section section--theme-blanco section--pad-loose who" aria-labelledby="who-tag">
+<section id="who" class="section section--theme-blanco section--pad-loose who" aria-labelledby="who-tag" data-reveal>
   <div class="who__decor" aria-hidden="true"></div>
   <div class="who__inner">
     <div class="section__head who__head">
@@ -234,7 +234,7 @@ built to measure.</h2>
     </div>
   </div>
 </section>
-<section class="section section--theme-negro diff" aria-labelledby="diff-tag">
+<section class="section section--theme-negro diff" aria-labelledby="diff-tag" data-reveal>
   <div class="section__head">
     <span id="diff-tag" class="section__eyebrow"><span lang="es">QUÉ NOS HACE DIFERENTES</span><span lang="en">WHAT MAKES US DIFFERENT</span></span>
     <span class="section__index">04</span>
@@ -271,7 +271,7 @@ built to measure.</h2>
   <p class="diff__desc" id="diff-body-4"><span lang="es">Sin capas. Hablas directo con quien construye. Decisiones rápidas, contexto compartido.</span><span lang="en">No layers. You talk directly with the people who build. Quick decisions, shared context.</span></p>
 </li></ul>
 </section>
-<section id="team" class="section section--theme-blanco team" aria-labelledby="team-tag">
+<section id="team" class="section section--theme-blanco team" aria-labelledby="team-tag" data-reveal>
   <div class="section__head">
     <span id="team-tag" class="section__eyebrow"><span lang="es">EQUIPO</span><span lang="en">TEAM</span></span>
     <span class="section__index">05</span>
@@ -285,7 +285,7 @@ One single idea.</h2>
   </div>
   <div class="team__grid"><article class="team__card">
   <div class="team__photo-wrap">
-    <img class="team__photo" src="/assets/team/jose.jpg" alt="José Domínguez" width="400" height="500" loading="lazy" decoding="async">
+    <img class="team__photo" src="/assets/team/jose.jpg" alt="José Domínguez" width="400" height="500" decoding="async">
     <span class="team__num">01</span>
     <div class="team__overlay" aria-hidden="true">
       <div>
@@ -303,7 +303,7 @@ One single idea.</h2>
   </div>
 </article><article class="team__card">
   <div class="team__photo-wrap">
-    <img class="team__photo" src="/assets/team/juanmi.jpg" alt="Juan Miguel Gómez" width="400" height="500" loading="lazy" decoding="async">
+    <img class="team__photo" src="/assets/team/juanmi.jpg" alt="Juan Miguel Gómez" width="400" height="500" decoding="async">
     <span class="team__num">02</span>
     <div class="team__overlay" aria-hidden="true">
       <div>
@@ -321,7 +321,7 @@ One single idea.</h2>
   </div>
 </article><article class="team__card">
   <div class="team__photo-wrap">
-    <img class="team__photo" src="/assets/team/santi.jpg" alt="Santiago Chaustre" width="400" height="500" loading="lazy" decoding="async">
+    <img class="team__photo" src="/assets/team/santi.jpg" alt="Santiago Chaustre" width="400" height="500" decoding="async">
     <span class="team__num">03</span>
     <div class="team__overlay" aria-hidden="true">
       <div>
@@ -339,7 +339,7 @@ One single idea.</h2>
   </div>
 </article></div>
 </section>
-<section id="contact" class="section section--theme-ciruela section--pad-tall contact" aria-labelledby="contact-tag">
+<section id="contact" class="section section--theme-ciruela section--pad-tall contact" aria-labelledby="contact-tag" data-reveal>
   <div class="contact__inner">
     <div>
       <div class="section__head">
@@ -381,9 +381,25 @@ your solution.</h2>
   </div>
   <div class="footer__bottom">
     <span class="footer__copy">/ BOG — COL / 2026</span>
+    <button class="footer__game-trigger" type="button" data-action="invaders-open" aria-label="WOGO Invaders" title="WOGO Invaders">
+      <svg class="footer__game-icon" width="14" height="12" viewBox="0 0 14 12" aria-hidden="true"><rect x="2" y="0" width="2" height="2"/><rect x="10" y="0" width="2" height="2"/><rect x="0" y="2" width="14" height="2"/><rect x="0" y="4" width="2" height="2"/><rect x="4" y="4" width="2" height="2"/><rect x="8" y="4" width="2" height="2"/><rect x="12" y="4" width="2" height="2"/><rect x="2" y="6" width="10" height="2"/><rect x="0" y="8" width="2" height="2"/><rect x="4" y="8" width="2" height="2"/><rect x="8" y="8" width="2" height="2"/><rect x="12" y="8" width="2" height="2"/><rect x="2" y="10" width="2" height="2"/><rect x="10" y="10" width="2" height="2"/></svg><span class="footer__game-label">Press start</span>
+    </button>
     <span class="footer__slogan"><span lang="es">Si es Wogo, es Weno</span><span lang="en">If it&#x27;s Wogo, it&#x27;s good</span></span>
   </div>
 </footer>
+<div class="invaders" data-invaders hidden inert aria-hidden="true">
+  <div class="invaders__dialog" role="dialog" aria-modal="true" aria-labelledby="invaders-title">
+    <div class="invaders__chrome">
+      <span class="invaders__chrome-label" id="invaders-title">&gt; WOGO/INVADERS · v0.1</span>
+      <button class="invaders__close" type="button" data-action="invaders-close" aria-label="Close">ESC ✕</button>
+    </div>
+    <canvas class="invaders__canvas" data-invaders-canvas width="720" height="480"></canvas>
+    <div class="invaders__credits">
+      <span lang="es">BUILT WITH ❤ EN BOGOTÁ — A WOGO EASTER EGG</span>
+      <span lang="en">BUILT WITH ❤ IN BOGOTÁ — A WOGO EASTER EGG</span>
+    </div>
+  </div>
+</div>
 <script defer src="/assets/js/wogo.js"></script>
 </body>
 </html>
