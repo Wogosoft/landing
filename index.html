@@ -102,10 +102,10 @@
           <span><span lang="es">Hola@wogo.com.co</span><span lang="en">Hola@wogo.com.co</span></span>
           <span class="btn__icon" aria-hidden="true">&gt;</span>
         </a>
-        <a class="btn" href="#team">
+        <button class="btn" type="button" data-action="about-open">
           <span><span lang="es">Conoce el equipo</span><span lang="en">Meet the team</span></span>
           <span class="btn__icon" aria-hidden="true">&gt;</span>
-        </a>
+        </button>
         <a class="btn" href="#services">
           <span><span lang="es">Qué hacemos</span><span lang="en">What we do</span></span>
           <span class="btn__icon" aria-hidden="true">&gt;</span>
@@ -220,15 +220,19 @@ built to measure.</h2>
         <p class="section__body who__body" lang="es">La excelencia técnica es nuestra pasión. No vinimos a hacer plata — vinimos a elevar la barra del software colombiano. Ofrecemos software que se adapta a la industria, no a clientes individuales — eso nos permite trabajar con precios realistas para el contexto local.</p><p class="section__body who__body" lang="en">Technical excellence is our passion. We didn&#x27;t come to make money — we came to raise the bar of Colombian software. We build software that adapts to the industry, not to individual clients — which lets us work at realistic prices for the local context.</p>
       </div>
       <ul class="who__pillars"><li class="who__pillar" data-reveal>
+  <span class="who__pillar-num">01</span>
   <div class="who__pillar-name"><span lang="es">Precisión</span><span lang="en">Precision</span></div>
   <p class="who__pillar-desc"><span lang="es">Detalle, cuidado, criterio.</span><span lang="en">Detail, care, judgment.</span></p>
 </li><li class="who__pillar" data-reveal>
+  <span class="who__pillar-num">02</span>
   <div class="who__pillar-name"><span lang="es">Autenticidad</span><span lang="en">Authenticity</span></div>
   <p class="who__pillar-desc"><span lang="es">Cercano, confiable, sincero.</span><span lang="en">Close, trustworthy, honest.</span></p>
 </li><li class="who__pillar" data-reveal>
+  <span class="who__pillar-num">03</span>
   <div class="who__pillar-name"><span lang="es">Flexibilidad</span><span lang="en">Flexibility</span></div>
   <p class="who__pillar-desc"><span lang="es">Movimiento, balance, juego.</span><span lang="en">Movement, balance, play.</span></p>
 </li><li class="who__pillar" data-reveal>
+  <span class="who__pillar-num">04</span>
   <div class="who__pillar-name"><span lang="es">Estructura</span><span lang="en">Structure</span></div>
   <p class="who__pillar-desc"><span lang="es">Método, modular, proceso.</span><span lang="en">Method, modular, process.</span></p>
 </li></ul>
@@ -341,6 +345,15 @@ One single idea.</h2>
 </article></div>
 </section>
 <section id="contact" class="section section--theme-ciruela section--pad-tall contact" aria-labelledby="contact-tag" data-reveal>
+  <div class="contact__decor" aria-hidden="true">
+    <svg class="contact__decor-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+      <rect width="1000" height="600" fill="var(--wogo-ciruela)"/>
+      <g class="hero__blob hero__blob--a"><path d="M -100 380 Q 280 140 700 280 Q 1100 410 1200 280 L 1200 700 L -100 700 Z" fill="var(--wogo-rosa-malva)" opacity="0.55"/></g>
+      <g class="hero__blob hero__blob--d"><rect x="450" y="380" width="560" height="160" rx="80" fill="var(--wogo-aguamarina)" opacity="0.30"/></g>
+      <g class="hero__blob hero__blob--b"><circle cx="180" cy="120" r="160" fill="var(--wogo-rosa-malva)" opacity="0.50"/></g>
+      <g class="hero__blob hero__blob--c"><circle cx="820" cy="120" r="70" fill="var(--wogo-aguamarina)" opacity="0.45"/></g>
+    </svg>
+  </div>
   <div class="contact__inner">
     <div>
       <div class="section__head">
@@ -352,17 +365,15 @@ tu solución.</h2><h2 class="contact__title" lang="en">Let&#x27;s build
 your solution.</h2>
       <p class="contact__sub" lang="es">Estamos terminando de armar la casa. Mientras tanto, escríbenos.</p><p class="contact__sub" lang="en">We&#x27;re still finishing the house. In the meantime, write to us.</p>
     </div>
-    <div>
-      <span class="pill contact__pill"><span>&gt; <span lang="es">COMING SOON</span><span lang="en">COMING SOON</span></span></span>
-      <div class="contact__email-block">
-        <a class="contact__email" href="mailto:hola@wogo.com.co">hola@wogo.com.co</a>
-        <a class="btn" href="mailto:hola@wogo.com.co">
-          <span><span lang="es">Escríbenos</span><span lang="en">Write to us</span></span>
-          <span class="btn__icon" aria-hidden="true">&gt;</span>
-        </a>
-        <span class="contact__city">Bogotá, Colombia</span>
-      </div>
-    </div>
+    <aside class="contact__card">
+      <span class="contact__tag">&gt; <span lang="es">COMING SOON</span><span lang="en">COMING SOON</span></span>
+      <a class="contact__email" href="mailto:hola@wogo.com.co">hola@wogo.com.co</a>
+      <a class="btn contact__cta" href="mailto:hola@wogo.com.co">
+        <span><span lang="es">Escríbenos</span><span lang="en">Write to us</span></span>
+        <span class="btn__icon" aria-hidden="true">&gt;</span>
+      </a>
+      <span class="contact__city">Bogotá, Colombia</span>
+    </aside>
   </div>
 </section>
 </main>
@@ -388,6 +399,43 @@ your solution.</h2>
     <span class="footer__slogan"><span lang="es">Si es Wogo, es Weno</span><span lang="en">If it&#x27;s Wogo, it&#x27;s good</span></span>
   </div>
 </footer>
+<div class="about" data-about hidden inert aria-hidden="true">
+  <div class="about__overlay" data-action="about-close"></div>
+  <div class="about__panel" role="dialog" aria-modal="true" aria-labelledby="about-title">
+    <div class="about__chrome">
+      <span class="about__chrome-label" id="about-title">&gt; <span lang="es">QUIÉNES SOMOS</span><span lang="en">WHO WE ARE</span></span>
+      <button class="about__close" type="button" data-action="about-close" aria-label="Close">×</button>
+    </div>
+    <div class="about__body">
+      <h3 class="about__title" lang="es">Tres ingenieros.
+Una sola idea.</h3><h3 class="about__title" lang="en">Three engineers.
+One single idea.</h3>
+      <p class="about__lead" lang="es">Wogo existe para demostrar que en Colombia sí creamos software de calidad.</p><p class="about__lead" lang="en">Wogo exists to prove that in Colombia, we do build quality software.</p>
+      <p class="about__body-text" lang="es">La excelencia técnica es nuestra pasión. No vinimos a hacer plata — vinimos a elevar la barra del software colombiano. Ofrecemos software que se adapta a la industria, no a clientes individuales — eso nos permite trabajar con precios realistas para el contexto local.</p><p class="about__body-text" lang="en">Technical excellence is our passion. We didn&#x27;t come to make money — we came to raise the bar of Colombian software. We build software that adapts to the industry, not to individual clients — which lets us work at realistic prices for the local context.</p>
+      <div class="about__pillars"><div class="about__pillar">
+  <span class="about__pillar-num">01</span>
+  <div class="about__pillar-name"><span lang="es">Precisión</span><span lang="en">Precision</span></div>
+  <div class="about__pillar-desc"><span lang="es">Detalle, cuidado, criterio.</span><span lang="en">Detail, care, judgment.</span></div>
+</div><div class="about__pillar">
+  <span class="about__pillar-num">02</span>
+  <div class="about__pillar-name"><span lang="es">Autenticidad</span><span lang="en">Authenticity</span></div>
+  <div class="about__pillar-desc"><span lang="es">Cercano, confiable, sincero.</span><span lang="en">Close, trustworthy, honest.</span></div>
+</div><div class="about__pillar">
+  <span class="about__pillar-num">03</span>
+  <div class="about__pillar-name"><span lang="es">Flexibilidad</span><span lang="en">Flexibility</span></div>
+  <div class="about__pillar-desc"><span lang="es">Movimiento, balance, juego.</span><span lang="en">Movement, balance, play.</span></div>
+</div><div class="about__pillar">
+  <span class="about__pillar-num">04</span>
+  <div class="about__pillar-name"><span lang="es">Estructura</span><span lang="en">Structure</span></div>
+  <div class="about__pillar-desc"><span lang="es">Método, modular, proceso.</span><span lang="en">Method, modular, process.</span></div>
+</div></div>
+      <a class="btn btn--primary about__cta" href="mailto:hola@wogo.com.co">
+        <span><span lang="es">Escríbenos</span><span lang="en">Write to us</span></span>
+        <span class="btn__icon" aria-hidden="true">&gt;</span>
+      </a>
+    </div>
+  </div>
+</div>
 <div class="invaders" data-invaders hidden inert aria-hidden="true">
   <div class="invaders__dialog" role="dialog" aria-modal="true" aria-labelledby="invaders-title">
     <div class="invaders__chrome">

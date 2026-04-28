@@ -2,8 +2,9 @@
 //   1. language toggle (ES/EN)
 //   2. accordion open/close (services + diff)
 //   3. hero typed-text rotator
-//   4. scroll-reveal via IntersectionObserver
-//   5. WOGO Invaders easter-egg game (canvas)
+//   4. WOGO Invaders easter-egg game (canvas)
+//   5. About modal triggered from hero CTA
+// Reveal animations are pure CSS — no JS gating, never invisible.
 (function () {
   'use strict';
 
@@ -133,38 +134,33 @@
     typedReset();
   })();
 
-  // ---------- 4. Scroll-reveal -----------------------------------------
-  // Sections fade/slide in as they enter the viewport. Above-fold targets
-  // are revealed immediately on load (with animation). A safety timeout
-  // also reveals everything unconditionally — content must never be stuck
-  // invisible if IO is delayed.
+  // ---------- 4. About modal --------------------------------------------
+  // Hero "Meet the team" CTA opens a side drawer with mission + pillars.
   (function () {
-    var targets = doc.querySelectorAll('[data-reveal]');
-    if (!targets.length) return;
-    function revealAll() {
-      for (var i = 0; i < targets.length; i++) targets[i].classList.add('is-revealed');
+    var root = doc.querySelector('[data-about]');
+    if (!root) return;
+    var lastFocus = null;
+    function open() {
+      lastFocus = doc.activeElement;
+      root.hidden = false;
+      root.removeAttribute('inert');
+      root.removeAttribute('aria-hidden');
+      doc.addEventListener('keydown', onKey);
+      var closeBtn = root.querySelector('.about__close');
+      if (closeBtn) closeBtn.focus();
     }
-    if (reducedMotion || !('IntersectionObserver' in window)) { revealAll(); return; }
-
-    var vh = window.innerHeight || 800;
-    var deferred = [];
-    requestAnimationFrame(function () {
-      for (var i = 0; i < targets.length; i++) {
-        var rect = targets[i].getBoundingClientRect();
-        if (rect.top < vh * 1.1) targets[i].classList.add('is-revealed');
-        else deferred.push(targets[i]);
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
-      deferred.forEach(function (el) { io.observe(el); });
+    function close() {
+      root.hidden = true;
+      root.setAttribute('inert', '');
+      root.setAttribute('aria-hidden', 'true');
+      doc.removeEventListener('keydown', onKey);
+      if (lastFocus && lastFocus.focus) try { lastFocus.focus(); } catch (e) {}
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    doc.addEventListener('click', function (e) {
+      if (e.target.closest('[data-action="about-open"]')) { open(); return; }
+      if (e.target.closest('[data-action="about-close"]')) { close(); return; }
     });
-    setTimeout(revealAll, 1500);
   })();
 
   // ---------- 5. WOGO Invaders -----------------------------------------
