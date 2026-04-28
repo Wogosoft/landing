@@ -1,0 +1,183 @@
+/* ============================================================
+   WOGO brand design system
+   Source: Manual de Identidad WOGO v1.0.0 (NN Estudio, Bogotá 2025)
+
+   Naming follows BEM:
+     .wogo                       — root block (set on <body>)
+     .wogo__<element>            — typography & component elements
+     .wogo__<element>--<mod>     — element variants
+     .wogo--theme-<name>         — theme modifiers on the root block
+
+   Critical-path styles (font-faces, :root tokens, layout reset,
+   responsive overrides, focus / a11y helpers, keyframes) stay inline
+   in index.html so the first paint is not blocked on a stylesheet.
+   ============================================================ */
+
+/* ---------- Typography elements ---------- */
+
+.wogo__display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+}
+
+.wogo__h1,
+.wogo h1:not([class]) {
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-normal);
+  text-transform: uppercase;
+}
+
+.wogo__h2,
+.wogo h2:not([class]) {
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+}
+
+.wogo__h3,
+.wogo h3:not([class]) {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+}
+
+.wogo__h4,
+.wogo h4:not([class]) {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+}
+
+.wogo__eyebrow {
+  font-family: var(--font-body);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+.wogo__body,
+.wogo p:not([class]) {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  text-wrap: pretty;
+}
+
+.wogo__body--lg {
+  font-family: var(--font-body);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-normal);
+}
+
+.wogo__small,
+.wogo small:not([class]) {
+  font-size: var(--fs-small);
+  color: var(--fg-2);
+}
+
+.wogo__micro {
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-wide);
+}
+
+.wogo__code,
+.wogo code:not([class]) {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-regular);
+  font-size: 0.9em;
+  background: var(--bg-2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+/* ---------- Section label: "> SECTION <" ---------- */
+
+.wogo__section-label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-small);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: currentColor;
+}
+
+.wogo__section-label::before { content: "> "; }
+.wogo__section-label::after  { content: " <"; }
+
+/* ---------- Contenedor pill (the brand's signature stadium) ---------- */
+
+.wogo__contenedor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45em 1em;
+  border: var(--stroke-w) solid currentColor;
+  border-radius: var(--radius-pill);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  line-height: 1;
+}
+
+.wogo__contenedor--filled {
+  border-color: transparent;
+  background: currentColor;
+}
+
+/* ---------- Theme modifiers — flip semantic tokens in one shot ---------- */
+
+.wogo--theme-pino {
+  --bg-1: var(--wogo-pino);
+  --fg-1: var(--wogo-blanco);
+  --fg-2: #B8E7E7;
+  --fg-3: #7FBDBD;
+  --border-2: var(--wogo-aguamarina);
+}
+
+.wogo--theme-ciruela {
+  --bg-1: var(--wogo-ciruela);
+  --fg-1: var(--wogo-blanco);
+  --fg-2: #E9B7CF;
+  --fg-3: #B38297;
+  --border-2: var(--wogo-rosa-malva);
+}
+
+.wogo--theme-aguamarina {
+  --bg-1: var(--wogo-aguamarina);
+  --fg-1: var(--wogo-pino);
+  --fg-2: #0A6064;
+  --fg-3: #357478;
+  --border-2: var(--wogo-pino);
+}
+
+.wogo--theme-rosa {
+  --bg-1: var(--wogo-rosa-malva);
+  --fg-1: var(--wogo-ciruela);
+  --fg-2: #7F1B4F;
+  --fg-3: #A5547A;
+  --border-2: var(--wogo-ciruela);
+}
+
+.wogo--theme-negro {
+  --bg-1: var(--wogo-negro);
+  --fg-1: var(--wogo-blanco);
+  --fg-2: #B8BCC0;
+  --fg-3: #7F8388;
+  --border-2: var(--wogo-blanco);
+}
