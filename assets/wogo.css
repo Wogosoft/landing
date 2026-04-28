@@ -398,11 +398,10 @@ button {
   color: var(--wogo-ciruela);
   font-size: 18px;
   line-height: 1;
-  transform: rotate(45deg);
   transition: transform 280ms var(--ease), background-color 280ms var(--ease), color 280ms var(--ease);
 }
 .services__item--open .services__toggle {
-  transform: rotate(0);
+  transform: rotate(45deg);
   background: var(--wogo-ciruela);
   color: var(--wogo-blanco);
 }
@@ -872,14 +871,30 @@ button {
 
 [data-reveal] {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+  transform: translateY(20px);
+  transition: opacity 600ms var(--ease), transform 600ms var(--ease);
   will-change: opacity, transform;
 }
 [data-reveal].is-revealed {
   opacity: 1;
   transform: none;
 }
+/* Stagger sibling items so they cascade rather than popping at once */
+.services__item[data-reveal]:nth-of-type(2) { transition-delay: 60ms; }
+.services__item[data-reveal]:nth-of-type(3) { transition-delay: 120ms; }
+.services__item[data-reveal]:nth-of-type(4) { transition-delay: 180ms; }
+.services__item[data-reveal]:nth-of-type(5) { transition-delay: 240ms; }
+.services__item[data-reveal]:nth-of-type(6) { transition-delay: 300ms; }
+.diff__item[data-reveal]:nth-of-type(2) { transition-delay: 80ms; }
+.diff__item[data-reveal]:nth-of-type(3) { transition-delay: 160ms; }
+.diff__item[data-reveal]:nth-of-type(4) { transition-delay: 240ms; }
+.diff__item[data-reveal]:nth-of-type(5) { transition-delay: 320ms; }
+.team__card[data-reveal]:nth-of-type(2) { transition-delay: 120ms; }
+.team__card[data-reveal]:nth-of-type(3) { transition-delay: 240ms; }
+.who__pillar[data-reveal]:nth-of-type(2) { transition-delay: 80ms; }
+.who__pillar[data-reveal]:nth-of-type(3) { transition-delay: 160ms; }
+.who__pillar[data-reveal]:nth-of-type(4) { transition-delay: 240ms; }
+
 .hero[data-reveal] { opacity: 1; transform: none; }
 .hero[data-reveal] .hero__body {
   opacity: 0;
